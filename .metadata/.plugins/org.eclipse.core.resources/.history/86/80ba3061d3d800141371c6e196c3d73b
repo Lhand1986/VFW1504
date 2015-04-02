@@ -29,7 +29,7 @@ var buttonViewLeft = Ti.UI.createView({
 var buttonViewRight = Ti.UI.createView({
 	backgroundColor: "#14ad80",
 	height: 50,
-	right: 20,
+	left: 20,
 	bottom: 140,
 	left: "60%"
 });

@@ -19,22 +19,13 @@ var textLabel = Ti.UI.createLabel({
 });
 
 var buttonViewLeft = Ti.UI.createView({
-	backgroundColor: "#14ad80",
-	height: 50,
+	backgroundColor: "#ee4000",
+	height: textView.bottom + 10,
 	left: 20,
-	bottom: 140,
-	right: "60%"
+	bottom: 50,
+	right: "30%"
 });
-
-var buttonViewRight = Ti.UI.createView({
-	backgroundColor: "#14ad80",
-	height: 50,
-	right: 20,
-	bottom: 140,
-	left: "60%"
-});
-
 
 mainWindow.open();
-mainWindow.add(textView, buttonViewLeft, buttonViewRight);
+mainWindow.add(textView, buttonViewLeft);
 textView.add(textLabel);

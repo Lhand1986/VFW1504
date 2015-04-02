@@ -1,5 +1,5 @@
 =run
 Hand_Levi_Project1\:launchMode=run
-Hand_Levi_Project1\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.1F19F02C-D7EF-45F0-8365-E6D68907A8DC
+Hand_Levi_Project1\:launchShortcut=com.appcelerator.titanium.mobile.ui.android.device.launchShortcut
 LAST_LAUNCH_TIMESTAMP=1427933781072
 eclipse.preferences.version=1
