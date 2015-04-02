@@ -34,25 +34,7 @@ var buttonViewRight = Ti.UI.createView({
 	left: "60%"
 });
 
-var buttonTextLeft = Ti.UI.createLabel({
-	color: "#fff",
-	font: {fontSize: 15, fontFamily: "Helvetica"},
-	textAlign: "center",
-	text: "Previous"
-	
-});
-
-var buttonTextRight = Ti.UI.createLabel({
-	color: "#fff",
-	font: {fontSize: 15, fontFamily: "Helvetica"},
-	textAlign: "center",
-	text: "Next"
-	
-});
-
 
 mainWindow.open();
 mainWindow.add(textView, buttonViewLeft, buttonViewRight);
 textView.add(textLabel);
-buttonViewLeft.add(buttonTextLeft);
-buttonViewRight.add(buttonTextRight);

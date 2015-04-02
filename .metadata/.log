@@ -157,3 +157,6 @@ java.util.ConcurrentModificationException
 	at com.aptana.projects.wizards.AbstractNewProjectWizard.doCreateProject(AbstractNewProjectWizard.java:321)
 	at com.aptana.projects.wizards.AbstractNewProjectWizard$2.run(AbstractNewProjectWizard.java:374)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY com.appcelerator.titanium.android.core 4 0 2015-04-01 18:03:27.121
+!MESSAGE There are no Android devices connected
