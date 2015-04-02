@@ -56,5 +56,5 @@ mainWindow.add(textView, buttonViewLeft, buttonViewRight);
 textView.add(textLabel);
 buttonViewLeft.add(buttonTextLeft);
 buttonViewRight.add(buttonTextRight);
-var loadFile = require("favoriteShows");
+
 

@@ -12,7 +12,7 @@ var textView = Ti.UI.createView({
 });
 
 var textLabel = Ti.UI.createLabel({
-	text: "Click either Next or Previous to find out what some of my favorite shows are.",
+	text: "Click either Next or Previous to change the text on screen.",
 	font: {fontSize: 16, fontFamily: "AmericanTypewriter"},
 	textAlign: "center",
 	verticalAlign: "center",
@@ -56,5 +56,3 @@ mainWindow.add(textView, buttonViewLeft, buttonViewRight);
 textView.add(textLabel);
 buttonViewLeft.add(buttonTextLeft);
 buttonViewRight.add(buttonTextRight);
-var loadFile = require("favoriteShows");
-
