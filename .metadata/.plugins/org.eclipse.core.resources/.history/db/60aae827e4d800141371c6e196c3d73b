@@ -38,62 +38,40 @@ var buttonViewLeft = Ti.UI.createView({
 	//Restricting the size of the button
 	//Add a 50 pixel gap on the top
 	height: 50,
-	//Add a 20 pixel gap on the left
 	left: 20,
-	//Add a 140 pixel gap from the bottom
 	bottom: 140,
-	//Add a 60% gap on the right side of the button
 	right: "60%"
 });
-//Create a view for the right button
+
 var buttonViewRight = Ti.UI.createView({
-	//Assign a background color
 	backgroundColor: "#14ad80",
-	//Restricting the size of the button
-	//Add a 50 pixel gap on the top
 	height: 50,
-	//Add a 20 pixel gap on the right
 	right: 20,
-	//Add a 140 pixel gap from the bottom
 	bottom: 140,
-	//Add a 60% gap on the left side of the button
 	left: "60%"
 });
-//Initialize text for the left button
+
 var buttonTextLeft = Ti.UI.createLabel({
-	//Assign the color of the text
 	color: "#fff",
-	//Assign font styling
 	font: {fontSize: 15, fontFamily: "Helvetica"},
-	//Align the text to the center
 	textAlign: "center",
-	//Assign the text
 	text: "Previous"
 	
 });
-//Initialize text for the right button
+
 var buttonTextRight = Ti.UI.createLabel({
-	//Assign the color of the text
 	color: "#fff",
-	//Assign font styling
 	font: {fontSize: 15, fontFamily: "Helvetica"},
-	//Align the text to the center
 	textAlign: "center",
-	//Assign the text
 	text: "Next"
 	
 });
 
-//Open the main window
+
 mainWindow.open();
-//Add the textView and buttons to the main window
 mainWindow.add(textView, buttonViewLeft, buttonViewRight);
-//Add the label to textView
 textView.add(textLabel);
-//Add text to buttonViewLeft
 buttonViewLeft.add(buttonTextLeft);
-//Add text to buttonViewRight
 buttonViewRight.add(buttonTextRight);
-//Assign a variable that will call the program to load the js file favoriteShows
 var loadFile = require("favoriteShows");
 
