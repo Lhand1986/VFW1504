@@ -1,0 +1,14 @@
+var televisionShows = ["Firefly", "Doctor Who", "Dollhouse", "Fringe", "Grimm", "Sherlock", "QI (Quite interesting)"];
+
+
+var displayItemsLeft = function(){
+	textLabel.hide();
+	textLabel = null;
+};
+
+var displayItemsRight = function(){
+	textLabel.text = televisionShows;
+	
+};
+buttonViewLeft.addEventListener("click", displayItemsLeft);
+buttonViewRight.addEventListener("click", displayItemsRight);

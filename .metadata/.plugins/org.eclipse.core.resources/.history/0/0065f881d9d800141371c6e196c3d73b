@@ -12,7 +12,7 @@ var textView = Ti.UI.createView({
 });
 
 var textLabel = Ti.UI.createLabel({
-	text: "",
+	text: "Click either Next or Previous to find out what some of my favorite shows are.",
 	font: {fontSize: 16, fontFamily: "AmericanTypewriter"},
 	textAlign: "center",
 	verticalAlign: "center",

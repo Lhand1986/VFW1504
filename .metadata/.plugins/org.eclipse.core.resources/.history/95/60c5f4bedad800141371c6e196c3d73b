@@ -14,12 +14,8 @@ var displayItemsLeft = function(){
 };
 
 var displayItemsRight = function(){
-	if(i === 6){
-		i = 0;
-	}else{
-		i++;
-	}
-	textLabel.text = televisionShows[i];
+	;
+	
 };
 buttonViewLeft.addEventListener("click", displayItemsLeft);
 buttonViewRight.addEventListener("click", displayItemsRight);

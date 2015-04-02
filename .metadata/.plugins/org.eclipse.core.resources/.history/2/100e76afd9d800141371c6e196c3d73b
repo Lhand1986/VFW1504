@@ -1,25 +1,15 @@
 var televisionShows = ["1. Firefly", "2. Doctor Who", "3. Dollhouse", "4. Fringe", "5. Grimm", "6. Sherlock", "7. QI (Quite interesting)"];
 
-var i = 0;
-textLabel.text = televisionShows[i];
+textLabel.text = televisionShows[0];
 
 var displayItemsLeft = function(){
-		if(i === 0){
-		i = 6;
-	}else{
-		i--;
-	}
-	textLabel.text = televisionShows[i];
-
+	textLabel.hide();
+	textLabel = null;
 };
 
 var displayItemsRight = function(){
-	if(i === 6){
-		i = 0;
-	}else{
-		i++;
-	}
-	textLabel.text = televisionShows[i];
+	textLabel.text = televisionShows;
+	
 };
 buttonViewLeft.addEventListener("click", displayItemsLeft);
 buttonViewRight.addEventListener("click", displayItemsRight);
