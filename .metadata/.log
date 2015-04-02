@@ -1,0 +1,159 @@
+
+!ENTRY org.eclipse.core.resources 4 1 2015-04-01 17:12:40.723
+!MESSAGE Problems occurred while refreshing local changes
+!SUBENTRY 1 org.eclipse.core.resources 4 1 2015-04-01 17:12:40.723
+!MESSAGE Problems occurred while refreshing local changes
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Errors occurred while refreshing resources with the local file system.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.refreshResource(FileSystemResourceManager.java:923)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.refresh(FileSystemResourceManager.java:904)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1699)
+	at org.eclipse.core.internal.refresh.RefreshJob.runInWorkspace(RefreshJob.java:167)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Contains: The project description file (.project) for 'hand_levi_project1' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+!SUBENTRY 2 org.eclipse.core.resources 4 271 2015-04-01 17:12:40.724
+!MESSAGE Errors occurred while refreshing resources with the local file system.
+!SUBENTRY 3 org.eclipse.core.resources 4 567 2015-04-01 17:12:40.724
+!MESSAGE The project description file (.project) for 'hand_levi_project1' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+
+!ENTRY org.eclipse.osgi 2 1 2015-04-01 17:12:59.594
+!MESSAGE NLS missing message: MobileUsageUtil_mobile_event_error in: com.appcelerator.titanium.usage.messages
+
+!ENTRY org.eclipse.core.resources 4 566 2015-04-01 17:13:00.000
+!MESSAGE Could not save safe table.
+!STACK 0
+java.io.FileNotFoundException: /Users/Lhand/Desktop/Classes/VFW1504/Projects/.metadata/.plugins/org.eclipse.core.resources/.safetable/com.aptana.webserver.core.12 (No such file or directory)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:194)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:145)
+	at org.eclipse.core.internal.resources.SafeFileTable.save(SafeFileTable.java:82)
+	at org.eclipse.core.internal.resources.SaveContext.commit(SaveContext.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.commit(SaveManager.java:324)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1193)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1109)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.resources 4 566 2015-04-01 17:13:04.397
+!MESSAGE Could not save master table to file '/Users/Lhand/Desktop/Classes/VFW1504/Projects/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources.bak'.
+!STACK 0
+java.io.FileNotFoundException: /Users/Lhand/Desktop/Classes/VFW1504/Projects/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources.bak (No such file or directory)
+	at java.io.FileOutputStream.openAppend(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:192)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:116)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1229)
+	at org.eclipse.core.internal.resources.SaveManager.cleanMasterTable(SaveManager.java:228)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1138)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2376)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2365)
+	at com.appcelerator.titanium.rcp.IDEWorkbenchAdvisor$4.run(IDEWorkbenchAdvisor.java:524)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.eclipse.ui.ide 4 4 2015-04-01 17:13:06.641
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 4 1 2015-04-01 17:13:06.641
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 4 566 2015-04-01 17:13:06.641
+!MESSAGE Could not save safe table.
+!STACK 0
+java.io.FileNotFoundException: /Users/Lhand/Desktop/Classes/VFW1504/Projects/.metadata/.plugins/org.eclipse.core.resources/.safetable/com.aptana.webserver.core.1 (No such file or directory)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:194)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:145)
+	at org.eclipse.core.internal.resources.SafeFileTable.save(SafeFileTable.java:82)
+	at org.eclipse.core.internal.resources.SaveContext.commit(SaveContext.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.commit(SaveManager.java:324)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1193)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2376)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2365)
+	at com.appcelerator.titanium.rcp.IDEWorkbenchAdvisor$4.run(IDEWorkbenchAdvisor.java:524)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-04-01 17:13:08.955
+!MESSAGE An internal error occurred during: "Sending Analytics Ping ...".
+!STACK 0
+java.lang.NullPointerException
+	at com.aptana.usage.internal.DefaultAnalyticsEventHandler.getAnalyticsLogger(DefaultAnalyticsEventHandler.java:207)
+	at com.aptana.usage.internal.DefaultAnalyticsEventHandler.sendEventSync(DefaultAnalyticsEventHandler.java:241)
+	at com.aptana.usage.internal.DefaultAnalyticsEventHandler$1.run(DefaultAnalyticsEventHandler.java:75)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-04-01 17:16:11.811 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/Lhand/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/Lhand/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-04-01 17:16:18.323
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 2 0 2015-04-01 17:16:18.445
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-04-01 17:16:18.445
+!MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.run_on_device.android'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-04-01 17:16:18.445
+!MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.debug_on_device.android'
+
+!ENTRY com.aptana.buildpath.core 4 0 2015-04-01 17:16:58.802
+!MESSAGE (Build 3.4.1.201410281727) [ERROR]  null
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.AbstractList$Itr.checkForComodification(AbstractList.java:372)
+	at java.util.AbstractList$Itr.next(AbstractList.java:343)
+	at com.aptana.js.internal.core.inferencing.JSSymbolCollector.getInvocationProcessor(JSSymbolCollector.java:60)
+	at com.aptana.js.internal.core.inferencing.JSSymbolCollector.visit(JSSymbolCollector.java:501)
+	at com.aptana.js.core.parsing.ast.JSInvokeNode.accept(JSInvokeNode.java:31)
+	at com.aptana.js.internal.core.inferencing.JSSymbolCollector.accept(JSSymbolCollector.java:108)
+	at com.aptana.js.internal.core.inferencing.JSSymbolCollector.visit(JSSymbolCollector.java:372)
+	at com.aptana.js.core.parsing.ast.JSDeclarationNode.accept(JSDeclarationNode.java:37)
+	at com.aptana.js.core.parsing.ast.JSTreeWalker.visitChildren(JSTreeWalker.java:291)
+	at com.aptana.js.core.parsing.ast.JSTreeWalker.visit(JSTreeWalker.java:267)
+	at com.aptana.js.core.parsing.ast.JSVarNode.accept(JSVarNode.java:53)
+	at com.aptana.js.core.parsing.ast.JSTreeWalker.visitChildren(JSTreeWalker.java:291)
+	at com.aptana.js.core.parsing.ast.JSTreeWalker.visit(JSTreeWalker.java:232)
+	at com.aptana.js.core.parsing.ast.JSStatementsNode.accept(JSStatementsNode.java:29)
+	at com.aptana.js.internal.core.inferencing.JSSymbolCollector.accept(JSSymbolCollector.java:108)
+	at com.aptana.js.internal.core.inferencing.JSSymbolCollector.visit(JSSymbolCollector.java:471)
+	at com.aptana.js.core.parsing.ast.JSFunctionNode.accept(JSFunctionNode.java:46)
+	at com.aptana.js.internal.core.inferencing.JSSymbolCollector.accept(JSSymbolCollector.java:108)
+	at com.aptana.js.internal.core.inferencing.JSSymbolCollector.visit(JSSymbolCollector.java:306)
+	at com.aptana.js.core.parsing.ast.JSAssignmentNode.accept(JSAssignmentNode.java:84)
+	at com.aptana.js.internal.core.inferencing.JSSymbolCollector.accept(JSSymbolCollector.java:108)
+	at com.aptana.js.internal.core.inferencing.JSSymbolCollector.visit(JSSymbolCollector.java:539)
+	at com.aptana.js.core.parsing.ast.JSParseRootNode.accept(JSParseRootNode.java:51)
+	at com.aptana.js.core.parsing.ast.JSParseRootNode.getGlobals(JSParseRootNode.java:63)
+	at com.aptana.js.core.index.JSFileIndexingParticipant.getGlobals(JSFileIndexingParticipant.java:93)
+	at com.aptana.js.core.index.JSFileIndexingParticipant.processParseResults(JSFileIndexingParticipant.java:200)
+	at com.aptana.js.core.index.JSFileIndexingParticipant.index(JSFileIndexingParticipant.java:105)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:205)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:114)
+	at com.aptana.core.build.UnifiedBuilder.indexProjectBuildPaths(UnifiedBuilder.java:367)
+	at com.aptana.core.build.UnifiedBuilder.fullBuild(UnifiedBuilder.java:328)
+	at com.aptana.core.build.UnifiedBuilder.build(UnifiedBuilder.java:178)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:401)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:618)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:597)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:114)
+	at com.appcelerator.titanium.core.util.ContentAssistMetadataUtils.importContentAssistMetadata(ContentAssistMetadataUtils.java:256)
+	at com.appcelerator.titanium.ui.ide.wizard.NewMobileProjectWizard.finalizeProjectCreation(NewMobileProjectWizard.java:154)
+	at com.appcelerator.titanium.ui.wizard.BasicNewTitaniumProjectWizard.createNewProject(BasicNewTitaniumProjectWizard.java:300)
+	at com.aptana.projects.wizards.AbstractNewProjectWizard$1.run(AbstractNewProjectWizard.java:249)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2327)
+	at com.aptana.projects.wizards.AbstractNewProjectWizard.doCreateProject(AbstractNewProjectWizard.java:321)
+	at com.aptana.projects.wizards.AbstractNewProjectWizard$2.run(AbstractNewProjectWizard.java:374)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
