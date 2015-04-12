@@ -1,0 +1,1 @@
+/Users/Lhand/Desktop/Classes/VFW1504/Projects/Kitchen Sink/Resources/ui/handheld/tizen/platform/calendar_edit_event.js

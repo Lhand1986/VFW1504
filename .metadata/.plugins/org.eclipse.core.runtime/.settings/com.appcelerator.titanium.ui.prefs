@@ -1,6 +1,10 @@
 =run
 Hand_Levi_Project1\:launchMode=run
 Hand_Levi_Project1\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.ipad.launchShortcut.90449262-6BCF-41C3-B949-8DCDCBF43CB1
+Kitchen\ Sink\ Nook\:launchMode=run
+Kitchen\ Sink\ Nook\:launchShortcut=com.appcelerator.titanium.mobile.ui.android.device.launchShortcut
+Kitchen\ Sink\:launchMode=run
+Kitchen\ Sink\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.83830E52-C26E-4D64-AC9A-B505B47B20F1
 LAST_LAUNCH_TIMESTAMP=1428868611978
 Week_2_Examples\:launchMode=run
 Week_2_Examples\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.83830E52-C26E-4D64-AC9A-B505B47B20F1

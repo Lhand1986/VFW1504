@@ -202,3 +202,43 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/Lhand/.e
 !MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.run_on_device.android'
 !SUBENTRY 1 org.eclipse.ui 2 0 2015-04-12 12:56:46.924
 !MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.debug_on_device.android'
+
+!ENTRY com.aptana.git.ui 4 0 2015-04-12 14:16:45.583
+!MESSAGE (Build 3.4.1.201410281727) [ERROR]  Attempted to beginRule: R/, does not match outer scope rule: P/Kitchen Sink Nook
+!STACK 0
+java.lang.IllegalArgumentException: Attempted to beginRule: R/, does not match outer scope rule: P/Kitchen Sink Nook
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:63)
+	at org.eclipse.core.internal.jobs.ThreadJob.illegalPush(ThreadJob.java:134)
+	at org.eclipse.core.internal.jobs.ThreadJob.push(ThreadJob.java:333)
+	at org.eclipse.core.internal.jobs.ImplicitJobs.begin(ImplicitJobs.java:63)
+	at org.eclipse.core.internal.jobs.JobManager.beginRule(JobManager.java:286)
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:118)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2283)
+	at org.eclipse.core.internal.resources.Project.touch(Project.java:1403)
+	at org.eclipse.team.core.RepositoryProvider.unmap(RepositoryProvider.java:277)
+	at com.aptana.git.ui.actions.DisconnectHandler$1.runInWorkspace(DisconnectHandler.java:96)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.aptana.git.ui 4 0 2015-04-12 14:17:26.789
+!MESSAGE (Build 3.4.1.201410281727) [ERROR]  No provider registered for Kitchen Sink.
+!STACK 1
+org.eclipse.team.core.TeamException: No provider registered for Kitchen Sink.
+	at org.eclipse.team.internal.core.TeamPlugin.wrapException(TeamPlugin.java:128)
+	at org.eclipse.team.core.RepositoryProvider.unmap(RepositoryProvider.java:289)
+	at com.aptana.git.ui.actions.DisconnectHandler$1.runInWorkspace(DisconnectHandler.java:96)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.team.core.TeamException: No provider registered for Kitchen Sink.
+	at org.eclipse.team.core.RepositoryProvider.unmap(RepositoryProvider.java:256)
+	... 3 more
+!SUBENTRY 1 org.eclipse.team.core 4 0 2015-04-12 14:17:26.790
+!MESSAGE No provider registered for Kitchen Sink.
+!STACK 1
+org.eclipse.team.core.TeamException: No provider registered for Kitchen Sink.
+	at org.eclipse.team.core.RepositoryProvider.unmap(RepositoryProvider.java:256)
+	at com.aptana.git.ui.actions.DisconnectHandler$1.runInWorkspace(DisconnectHandler.java:96)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 2 org.eclipse.team.core 4 0 2015-04-12 14:17:26.790
+!MESSAGE No provider registered for Kitchen Sink.

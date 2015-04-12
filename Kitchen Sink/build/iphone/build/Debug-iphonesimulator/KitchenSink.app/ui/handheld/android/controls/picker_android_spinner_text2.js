@@ -1,0 +1,1 @@
+/Users/Lhand/Desktop/Classes/VFW1504/Projects/Kitchen Sink/Resources/ui/handheld/android/controls/picker_android_spinner_text2.js

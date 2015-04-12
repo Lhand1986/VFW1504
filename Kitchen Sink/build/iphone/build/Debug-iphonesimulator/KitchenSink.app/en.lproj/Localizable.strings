@@ -1,0 +1,13 @@
+/**
+ * Appcelerator Titanium
+ * this is a generated file - DO NOT EDIT
+ */
+
+"welcome_message" = "Welcome to Kitchen Sink for Titanium/";
+"user_agent_message" = "user agent set to";
+"format_test" = "Your name is %@";
+"base_ui_title" = "Base UI";
+"controls_win_title" = "Controls";
+"phone_win_title" = "Phone";
+"platform_win_title" = "Platform";
+"mashups_win_title" = "Mashups";
