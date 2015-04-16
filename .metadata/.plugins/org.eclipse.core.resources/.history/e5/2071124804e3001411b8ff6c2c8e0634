@@ -1,0 +1,28 @@
+//contains info but not organized (what kind of info is "sarah" for example?)
+/*var userArray = ["Sarah", 25, "sarah@test.com"];
+
+for(var i=0; i<userArray.length; i++){
+	console.log("Array contains:" + userArray[i]);
+}
+*/
+//Organized information using properties
+var userObject = {
+	name: "Sarah",
+	age: 25,
+	email: "sarah@test.com"
+};
+
+for(var i in userObject){
+	console.log("Object contains: " + userObject[i]);
+};
+
+
+
+
+
+
+
+
+
+
+

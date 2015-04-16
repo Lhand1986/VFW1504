@@ -1,7 +1,7 @@
 {
 	"target": "simulator",
 	"deployType": "development",
-	"iosSdkVersion": "8.2",
+	"iosSdkVersion": "8.3",
 	"deviceFamily": "iphone",
 	"iosSdkPath": "/Users/Lhand/Library/Application Support/Titanium/mobilesdk/osx/3.5.1.GA/iphone",
 	"tiCoreHash": "47658db9e85e6b4af144b3d6070d6de0",
@@ -14,7 +14,7 @@
 	"publisher": "Lhand",
 	"url": "http://",
 	"version": "1.0",
-	"description": "",
+	"description": "undefined",
 	"copyright": "2015 by Lhand",
 	"guid": "5641d445-52ad-41d5-8e8b-2b056ebb2e4b",
 	"skipJSMinification": true,

@@ -1,0 +1,13 @@
+// Create main window
+var mainWindow = Ti.UI.createWindow({
+	//Assign a title to the window
+	title: "StarCraft leaders",
+	//Assign a background color
+	backgroundColor: "#dadada"
+});
+
+var navWindow = Ti.UI.iOS.createNavigationWindow({
+	window: mainWindow
+});
+
+navWindow.open();

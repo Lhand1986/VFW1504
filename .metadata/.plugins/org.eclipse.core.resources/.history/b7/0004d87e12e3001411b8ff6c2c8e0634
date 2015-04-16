@@ -1,0 +1,65 @@
+var data = {
+	"show": "Doctor Who",
+	"characters": [
+	{"alias": "The Doctor", "role": "Protagonist"},
+	{"alias": "Amy", "role": "Companion"},
+	{"alias": "Rory", "role": "Companion 2"},
+	{"alias": "Dalek", "role": "Antagonist"}
+	]
+};
+
+for(var prop in data){
+	//console.log(data[prop]);
+	for(var x in data[prop]){
+		console.log(data[prop][x]);
+		if(x === "alias"){
+			console.log("balls");
+			for(var i=0; i<data[prop].alias.length; i++){
+				for(var z in data[prop].words[i]){
+					console.log(data[prop].words[i][z]);
+				}
+			}
+		}
+	}
+}
+
+/*var data = {
+	"nouns":{
+		"title": "Nouns",
+		"footer": "The nouns",
+		"words": [
+			{"eng": "Table", "esp": "Mesa"},
+			{"eng": "Cup", "esp": "Taza"},
+			{"eng": "Knife", "esp": "Cuchillo"}
+		]
+	},
+	"verbs":{
+		"title": "Verbs",
+		"footer": "The verbs",
+		"words": [
+			{"eng": "Run", "esp": "Correr"},
+			{"eng": "Walk", "esp": "Caminar"}
+		]
+	}
+};
+
+for(var prop in data){
+	//console.log(data[prop]);
+	for(var x in data[prop]){
+		//console.log(data[prop][x]);
+		if(x === "words"){
+			for(var i=0; i<data[prop].words.length; i++){
+				//console.log(data[prop].words[i]);
+				for(var z in data[prop].words[i]){
+					console.log(data[prop].words[i][z]);
+				}
+			}
+		}
+		
+	}
+};
+
+
+
+//You've got to keep in mind, are you looping through an array? Or are you looping through an object?
+*/
