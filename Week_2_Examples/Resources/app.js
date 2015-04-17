@@ -4,7 +4,7 @@ Titanium.UI.setBackgroundColor('#000');
 
 //Data
 //var frigates = [{title: "Atron"}, {title: "Imicus"}, {title: "Incursus"}, {title: "Maulus"}, {title: "Navi"}];
-/*var cruisers = [{title: "Exequror"}, {title: "Celestis"}, {title: "Vexor"}, {title: "Thorax"}];
+var cruisers = [{title: "Exequror"}, {title: "Celestis"}, {title: "Vexor"}, {title: "Thorax"}];
 
 var frigates = [
 	{title: "Atron", description: "A relatively fast, really long description"},
@@ -173,8 +173,8 @@ var section = Ti.UI.createTableViewSection({
 	//footerTitle: "Just to name a few ...",
 	footerView: customFooter
 });
-*/
 
+/*
 //JSON Object
 var ships = {
 	"frigs":{
@@ -271,3 +271,4 @@ var makeUI = function(){
 makeUI();
 
 navWindow.open();
+*/

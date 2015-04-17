@@ -1,0 +1,82 @@
+// Create main window
+var mainWindow = Ti.UI.createWindow({
+	//Assign a title
+	title: "StarCraft Leaders",
+	//Assign a background color
+	backgroundColor: "#dadada"
+});
+
+//Create a navigation window protocol
+var navWindow = Ti.UI.iOS.createNavigationWindow({
+	//Initialize mainWindow as the root level window
+	window: mainWindow
+});
+
+var terranHeader = Ti.UI.createView({
+	height: 50,
+	backgroundColor: "#efeff4"
+});
+
+var protossHeader = Ti.UI.createView({
+	height: 50,
+	backgroundColor: "#efeff4"
+});
+
+var zergHeader = Ti.UI.createView({
+	height: 50,
+	backgroundColor: "#efeff4"
+});
+
+var terranText = Ti.UI.createLabel({
+	text: "Terran Leaders",
+	font: {fontSize: 12},
+	color: "#aaa",
+	left: 18,
+	top: 4
+});
+
+var protossText = Ti.UI.createLabel({
+	text: "Protoss Leaders",
+	font: {fontSize: 12},
+	color: "#aaa",
+	left: 18,
+	top: 4
+});
+
+var zergText = Ti.UI.createLabel({
+	text: "Zerg Leaders",
+	font: {fontSize: 12},
+	color: "#aaa",
+	left: 18,
+	top: 4
+});
+
+terranHeader.add(terranText);
+protossHeader.add(protossText);
+zergHeader.add(zergText);
+
+var terranSection = Ti.UI.createTableViewSection({
+	headerView: terranHeader
+});
+
+var protossSection = Ti.UI.createTableViewSection({
+	headerView: protossHeader
+});
+
+var zergSection = Ti.UI.createTableViewSection({
+	headerView: zergHeader
+});
+
+var leaders = Ti.UI.createTableView({
+	style: Ti.UI.iPhone.TableViewStyle.GROUPED
+});
+
+var leadersSections = [terranSection, protossSection, zergSection];
+
+leaders.setData(leadersSections);
+
+//Open the main window as a Navigation Window.
+mainWindow.add(leaders);
+navWindow.open();
+//Load the additional .js file StarCraft_Leaders.js
+var loadFile = require("StarCraft_Leaders");

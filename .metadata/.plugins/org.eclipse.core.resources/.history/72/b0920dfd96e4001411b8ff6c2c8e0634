@@ -1,0 +1,20 @@
+// Create main window
+var mainWindow = Ti.UI.createWindow({
+	//Assign a background color
+	backgroundColor: "#dadada"
+});
+
+//Create a navigation window protocol
+var navWindow = Ti.UI.iOS.createNavigationWindow({
+	//Initialize mainWindow as the root level window
+	window: mainWindow
+});
+
+var leaders = Ti.UI.createTableView({
+	
+});
+
+//Open the main window as a Navigation Window.
+navWindow.open();
+//Load the additional .js file StarCraft_Leaders.js
+var loadFile = require("StarCraft_Leaders");
