@@ -1,5 +1,5 @@
 //TABLE VIEWS
-
+/*
 Titanium.UI.setBackgroundColor('#000');
 
 //Data
@@ -173,8 +173,8 @@ var section = Ti.UI.createTableViewSection({
 	//footerTitle: "Just to name a few ...",
 	footerView: customFooter
 });
+*/
 
-/*
 //JSON Object
 var ships = {
 	"frigs":{
@@ -271,4 +271,3 @@ var makeUI = function(){
 makeUI();
 
 navWindow.open();
-*/

@@ -1,0 +1,121 @@
+// Create main window
+var mainWindow = Ti.UI.createWindow({
+	//Assign a title
+	title: "StarCraft Leaders",
+	//Assign a background color
+	backgroundColor: "#dadada"
+});
+
+//Create a navigation window protocol
+var navWindow = Ti.UI.iOS.createNavigationWindow({
+	//Initialize mainWindow as the root level window
+	window: mainWindow
+});
+
+//Creating custom view for header
+var terranHeader = Ti.UI.createView({
+	height: 50,
+	backgroundColor: "#efeff4"
+});
+
+//Creating custom view for footer
+var customFooter = Ti.UI.createView({
+	height: 50,
+	backgroundColor: "efeff4"
+});
+
+//Creating custom view for header
+var protossHeader = Ti.UI.createView({
+	height: 50,
+	backgroundColor: "#efeff4"
+});
+
+//Creating custom view for header
+var zergHeader = Ti.UI.createView({
+	height: 50,
+	backgroundColor: "#efeff4"
+});
+
+//Creating a label for the terranHeader custom view
+var terranCH = Ti.UI.createLabel({
+	text: "Terrans",
+	font: {fontSize: 15},
+	color: "#000",
+	left: 18,
+	top: 4
+});
+//Creating a label for footer custom views
+var customFL = Ti.UI.createLabel({
+	text: "Leadership",
+	font: {fontSize: 12},
+	color: "#aaa",
+	left: 18,
+	top: 4
+});
+
+//Creating a label for the protossHeader custom view
+var protossCH = Ti.UI.createLabel({
+	text: "Protoss",
+	font: {fontSize: 15},
+	color: "#000",
+	left: 18,
+	top: 4
+});
+
+//Creating a label for the zergHeader custom view
+var zergCH = Ti.UI.createLabel({
+	text: "Zerg",
+	font: {fontSize: 15},
+	color: "#000",
+	left: 18,
+	top: 4
+});
+
+//Adding text to the custom footer view
+customFooter.add(customFL);
+//Adding the terranText property to the terranHeader custom view
+terranHeader.add(terranCH);
+//Adding the protossText property to the protossHeader custom view
+protossHeader.add(protossCH);
+//Adding the zergText property to the zergHeader custom view
+zergHeader.add(zergCH);
+
+//Creating table view section for the terrans
+var terranSection = Ti.UI.createTableViewSection({
+	//Adding custom view header to table view
+	headerView: terranHeader,
+	footerView: customFooter
+});
+
+//Creating table view section for the terrans
+var protossSection = Ti.UI.createTableViewSection({
+	//Adding custom view header to table view
+	headerView: protossHeader,
+	footerView: customFooter
+});
+
+//Creating table view section for the terrans
+var zergSection = Ti.UI.createTableViewSection({
+	//Adding custom view header to table view
+	headerView: zergHeader,
+	footerView: customFooter
+});
+
+//Creating a table view to hold information
+var leadersView = Ti.UI.createTableView({
+	//Setting the style of this table view as a GROUPED style for the iPhone
+	style: Ti.UI.iPhone.TableViewStyle.GROUPED
+});
+
+//Creating an array to pass the sections through to the leaders table view
+var leadersSections = [terranSection, protossSection, zergSection];
+
+//Assigning the leaderSections array to the leaders table view
+leadersView.setData(leadersSections);
+
+//Adding sections to the main window
+mainWindow.add(leadersView);
+//Opening the main window as a navigation window
+navWindow.open();
+//Load the additional .js file StarCraft_Leaders.js
+var loadFile = require("StarCraft_Leaders");
