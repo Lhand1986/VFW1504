@@ -1,0 +1,27 @@
+var pWidth = Ti.Platform.displayCaps.platformWidth;
+var pHeight = Ti.Platform.displayCaps.platformHeight;
+var itemCount = 15;
+var rowCount = 3;
+var margin = 10;
+var trueCanvasWidth = "";
+var size = "";
+
+var mainWin = Ti.UI.createWindow({
+	backgroundColor: "#fff"
+});
+
+var border = Ti.UI.createView({
+	backgroundColor: "#cecece",
+	height: 1,
+	width: pWidth,
+	top: 20
+});
+
+var viewContainer = Ti.UI.createView({
+	width: pWidth,
+	backgroundColor: "#fef"
+});
+
+mainWin.add(border);
+mainWin.add(viewContainer);
+mainWin.open();

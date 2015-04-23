@@ -1,0 +1,11 @@
+var mainWin = Ti.UI.createWindow({
+	backgroundColor: "#fff",
+	layout: "horizontal"
+});
+
+var newImage = Ti.UI.createImageView({
+	image: "images/ksp.jpg"
+});
+
+
+mainWin.open();

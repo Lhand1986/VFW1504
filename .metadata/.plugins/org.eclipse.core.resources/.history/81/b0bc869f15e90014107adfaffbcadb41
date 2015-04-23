@@ -1,0 +1,18 @@
+var win = Ti.UI.createWindow({
+	backgroundColor: "#f2f2f2",
+	layout: "vertical"
+});
+
+//collection of images
+var myImages = ["brook.jpg", "beach.jpg"];
+
+for(i=0; i<myImages.length; i++){
+	var myImage = Ti.UI.createImageView({
+		image: "imgs/" + myImages[i],
+		width: 200,
+		top: 20
+	});
+	win.add(myImage);
+}
+
+win.open();
