@@ -1,0 +1,17 @@
+var galleryWindow = Ti.UI.createWindow({
+	backgroundColor: "#f5f5f5"
+});
+
+var galleryButton = Ti.UI.createLabel({
+	text: "Open Gallery",
+	backgroundColor: "#333",
+	color: "#fff",
+	height: 50,
+	border: 5,
+	font: {fontSize: 12, fontFamily: "Arial"},
+	textAlign: "center",
+	width: "85%",
+	bottom: "50%"
+});
+
+mainWin.add(galleryButton);
