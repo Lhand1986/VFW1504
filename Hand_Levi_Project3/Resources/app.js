@@ -6,6 +6,7 @@ var mainWin = Ti.UI.createWindow({
 	backgroundColor: "#808080"
 });
 
+
 //Opening the main window as a navigation window
 mainWin.open();
 //Load the additional .js file Firefly.js

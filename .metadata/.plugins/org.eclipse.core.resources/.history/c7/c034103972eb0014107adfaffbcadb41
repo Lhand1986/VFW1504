@@ -1,0 +1,172 @@
+var imagesFolder = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "images");
+var imageFiles = imagesFolder.getDirectoryListing();
+
+//console.log(imageFiles);
+
+var pWidth = Ti.Platform.displayCaps.platformWidth;
+var pHeight = Ti.Platform.displayCaps.platformHeight;
+var rowCount = 4;
+var margin = 14;
+var trueCanvasWidth = pHeight - pWidth;
+var size = trueCanvasWidth / rowCount;
+
+var galleryButton = Ti.UI.createLabel({
+	title: "Firefly",
+	text: "Open Gallery",
+	backgroundColor: "#333",
+	color: "#fff",
+	height: 50,
+	borderRadius: 10,
+	font: {fontSize: 12, fontFamily: "Arial"},
+	textAlign: "center",
+	width: "90%",
+	bottom: "50%"
+});
+var border = Ti.UI.createView({
+	backgroundColor: "#cecece",
+	height: 1,
+	width: pWidth,
+	top: 20
+});
+
+var viewContainer = Ti.UI.createScrollView({
+	top: 0, //0 because of the horizontal layout
+	width: pWidth,
+	contentWidth: pWidth,
+	height: pHeight - border.height - border.top,
+	bottom: 50,
+	showVerticleScrollIndicator: true,
+	backgroundColor: "#808080",
+	layout: "horizontal"
+});
+
+for(var i=0; i<imageFiles.length; i++){
+	var view = Ti.UI.createView({
+		backgroundColor: "#808080",
+		id: imageFiles[i],
+		name: imageFiles[i],
+		top: margin,
+		left: margin,
+		width: size,
+		height: size,
+		borderRadius: 10
+	});
+	var thumb = Ti.UI.createImageView({
+		image: "images/" + imageFiles[i],
+		id: imageFiles[i],
+		top: 0,
+		width: view.width*2
+	});
+	view.add(thumb, border);
+	viewContainer.add(view);
+};
+//console.log(viewContainer.children);
+
+console.log(viewContainer.children);
+
+var thumbOpen = function(dataSource){
+	
+	var imageTransfer = dataSource.id;
+
+	
+	var pictureWindow = Ti.UI.createWindow({
+		backgroundColor: "#808080"
+	});
+	
+	var pictureViewContainer = Ti.UI.createView({
+		backgroundColor: "#808080",
+		height: pHeight - border.height - border.top,
+		top: 20
+	});
+	var pictureView = Ti.UI.createImageView({
+		image: "images/" + imageTransfer,
+		top: 0
+	});
+	
+		
+	var imageLabel = Ti.UI.createLabel({
+		text: imageTransfer,
+		font: {fontSize: 15, fontFamily: "Arial"},
+		color: "#333",
+		top: "center"
+	});
+	
+		var closePicButton = Ti.UI.createLabel({
+		text: "Close Window",
+		backgroundColor: "#333",
+		color: "#fff",
+		height: 50,
+		font: {fontSize: 12, fontFamily: "Arial"},
+		width: "100%",
+		bottom: 0,
+		textAlign: "center"
+	});
+	var closeWindow = function(){
+		pictureWindow.close({transition: Ti.UI.iPhone.AnimationStyle.CURL_DOWN});
+	};
+	closePicButton.addEventListener("click", closeWindow);
+	
+	
+	
+	pictureViewContainer.add(pictureView, imageLabel);
+	pictureWindow.add(pictureViewContainer, closePicButton);
+	pictureWindow.open();
+
+};
+
+var getDetail = function(dataSource){
+
+	var detailWindow = Ti.UI.createWindow({
+		backgroundColor: "#808080"
+	});
+	var detailTitleView = Ti.UI.createView({
+		height: 65,
+		backgroundColor: "#fff",
+		top: 0
+	});
+	var detailBorder = Ti.UI.createView({
+		backgroundColor: "#dbdbdb",
+		height: 1,
+		top: detailTitleView.height + detailTitleView.top
+	});
+	var detailTitleLabel = Ti.UI.createLabel({
+		//This might be changed
+		text: dataSource.title,
+		font: {fontSize: 20, fontFamily: "Arial", fontWeight: "bold"},
+		top: 30,
+		width: "100%",
+		textAlign: "center"
+	});
+	var closeButton = Ti.UI.createLabel({
+		text: "Close Window",
+		backgroundColor: "#333",
+		color: "#fff",
+		height: 50,
+		font: {fontSize: 12, fontFamily: "Arial"},
+		width: "100%",
+		bottom: 0,
+		textAlign: "center"
+	});
+	var closeWindow = function(){
+		detailWindow.close({transition: Ti.UI.iPhone.AnimationStyle.CURL_DOWN});
+	};
+	closeButton.addEventListener("click", closeWindow);
+	detailTitleView.add(detailTitleLabel);
+	detailWindow.add(detailTitleView, detailBorder, viewContainer, closeButton);
+	detailWindow.open({transition: Ti.UI.iPhone.AnimationStyle.CURL_UP});
+};
+
+
+galleryButton.addEventListener("click", function(event){
+	getDetail(event.source);
+});
+viewContainer.addEventListener("click", function(event){
+	if(event.source.id != null){
+		thumbOpen(event.source);
+	};
+	console.log(event.source.id);
+	
+});
+
+
+mainWin.add(galleryButton);

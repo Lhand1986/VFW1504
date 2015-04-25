@@ -25,6 +25,6 @@ Week_3_Examples_CreateImageView\:launchShortcut=com.appcelerator.titanium.mobile
 Week_3_Examples_LayoutModes\:launchMode=run
 Week_3_Examples_LayoutModes\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.7237B668-583A-4454-BF18-F5B4D21D4F3A
 Week_3_Examples_imageLayout\:launchMode=run
-Week_3_Examples_imageLayout\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.7237B668-583A-4454-BF18-F5B4D21D4F3A
+Week_3_Examples_imageLayout\:launchShortcut=com.appcelerator.titanium.mobile.ui.android.device.launchShortcut
 eclipse.preferences.version=1
 iOS\ build\ and\ deploy\:ConsoleLogLevel=Info

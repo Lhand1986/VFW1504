@@ -1,0 +1,46 @@
+// Create main window
+var mainWin = Ti.UI.createWindow({
+	//Assign a title
+	title: "Firefly",
+	//Assign a background color
+	backgroundColor: "#808080"
+});
+var border = Ti.UI.createView({
+	backgroundColor: "#cecece",
+	height: 1,
+	width: pWidth,
+	top: 20
+});
+
+var viewContainer = Ti.UI.createScrollView({
+	top: 0, //0 because of the horizontal layout
+	width: pWidth,
+	contentWidth: pWidth,
+	height: pHeight - border.height - border.top,
+	showVerticleScrollIndicator: true,
+	backgroundColor: "#fef",
+	layout: "horizontal"
+});
+
+for(var i=0; i<imageFiles.length; i++){
+	var view = Ti.UI.createView({
+		backgroundColor: "#33CCFF",
+		top: margin,
+		left: margin,
+		width: size,
+		height: size
+	});
+	var thumb = Ti.UI.createImageView({
+		image: "images/" + imageFiles[i],
+		top: 0,
+		width: view.width*2
+	});
+	view.add(thumb);
+	viewContainer.add(view);
+}
+mainWin.add(border, viewContainer);
+
+//Opening the main window as a navigation window
+mainWin.open();
+//Load the additional .js file Firefly.js
+var loadFile = require("Firefly");

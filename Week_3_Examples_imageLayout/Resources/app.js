@@ -40,7 +40,8 @@ for(var i=0; i<imageFiles.length; i++){
 		top: margin,
 		left: margin,
 		width: size,
-		height: size
+		height: size,
+		borderRadius: 10
 	});
 	var thumb = Ti.UI.createImageView({
 		image: "images/" + imageFiles[i],
