@@ -1,0 +1,7 @@
+var mainWin = Ti.UI.createWindow({
+	backgroundColor: "#808080"
+});
+
+//Require Launch page, Gallery page, Data page, and Custom page
+
+mainWin.open();

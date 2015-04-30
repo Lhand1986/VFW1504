@@ -1,0 +1,10 @@
+//Modularization using common.js library
+
+
+
+var loadFile = require("newFile");
+//var newFile = require("blerchFile");
+
+loadFile.runMessage();
+
+console.log(loadFile.myMessage);
