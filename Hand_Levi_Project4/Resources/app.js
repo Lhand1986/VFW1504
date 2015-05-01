@@ -1,6 +1,6 @@
 var mainWin = Ti.UI.createWindow({
 	backgroundColor: "#333333",
-	title: "Eye of the World"
+	title: "Doctor Who"
 });
 
 //Require Launch page, Gallery page, Data page, and Custom page

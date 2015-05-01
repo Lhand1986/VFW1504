@@ -62,6 +62,7 @@ function shuffle(array) {
 randomBtn.addEventListener("click", function(event){
 	shuffle(imageFiles);
 	displayImage();
+	console.log(imageFiles);
 	imageFiles.splice(0, 1);
 	if(imageFiles.length === 0){
 		imageFiles = galleryImg.getDirectoryListing();
