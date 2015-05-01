@@ -1,0 +1,8 @@
+alert("dataPage!");
+
+launchView.addEventListener("click", function(event){
+	console.log(event.source.id);
+	if(event.source.id != null){
+		openPage(event.source);
+	}
+});

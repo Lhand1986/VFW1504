@@ -1,0 +1,21 @@
+var galleryWindow = Ti.UI.createWindow({
+	backgroundColor: "#909090",
+	title: "Gallery"
+});
+
+exports.galleryCall = galleryWindow;
+
+var randomBtn = Ti.UI.createView({
+	backgroundColor: "#333333",
+	height: 65,
+	bottom: 0
+});
+var randomText = Ti.UI.createLabel({
+	text: "Random Image",
+	font: {fontSize: 20, fontFamily: "Arial", fontWeight: "bold"},
+	textAlign: "center",
+	color: "#e6e6e6"
+});
+
+randomBtn.add(randomText);
+galleryWindow.add(randomBtn);

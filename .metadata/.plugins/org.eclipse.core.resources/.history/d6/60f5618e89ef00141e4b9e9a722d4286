@@ -1,0 +1,6 @@
+var galleryWin = Ti.UI.createWindow({
+	backgroundColor: "#909090",
+	title: "Gallery"
+});
+
+navWin.open(galleryWin);

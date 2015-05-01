@@ -1,0 +1,60 @@
+var galleryWin = Ti.UI.createWindow({
+	backgroundColor: "#808080",
+	title: "topic/theme"
+});
+
+var launchView = Ti.UI.createView({
+});
+
+var galleryLabel = Ti.UI.createLabel({
+	text: "Gallery",
+	id: "gallery",
+	top: 0,
+	height: 75,
+	width: "100%",
+	backgroundColor: "#ffffff",
+	font: {fontSize: 22, fontFamily: "Helvetica", fontWeight: "bold"},
+	color: "#333",
+	textAlign: "center"
+});
+var dataLabel = Ti.UI.createLabel({
+	text: "Data",
+	id: "data",
+	top: galleryLabel.height,
+	height: 75,
+	width: "100%",
+	backgroundColor: "blue",
+	font: {fontSize: 22, fontFamily: "Helvetica", fontWeight: "bold"},
+	color: "#333",
+	textAlign: "center"
+});
+var customLabel = Ti.UI.createLabel({
+	text: "Custom Page",
+	id: "custom",
+	top: galleryLabel.height * 2,
+	height: 75,
+	width: "100%",
+	backgroundColor: "green",
+	font: {fontSize: 22, fontFamily: "Helvetica", fontWeight: "bold"},
+	color: "#333",
+	textAlign: "center"
+});
+
+galleryLabel.addEventListener("click", function(){
+	var galleryPage = require("galleryPage");
+});
+
+var openPage = function(dataSource){
+	if(dataSource.id === "gallery"){
+		var galleryPage = require("galleryPage");
+	}
+};
+
+launchView.addEventListener("click", function(event){
+	console.log(event.source.id);
+	if(event.source.id != null){
+		openPage(event.source);
+});
+
+launchView.add(galleryLabel, dataLabel, customLabel);
+mainWin.add(launchView);

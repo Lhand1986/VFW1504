@@ -1,0 +1,13 @@
+var galleryLabel = Ti.UI.createLabel({
+	text: "Gallery",
+	top: 0,
+	height: 50,
+	width: "100%",
+	backgroundColor: "#ffffff",
+	font: {fontSize: 22, fontFamily: "Helvetica", fontWeight: "bold"},
+	color: "#333",
+	textAlign: "center"
+});
+
+
+mainWin.add(galleryLabel);

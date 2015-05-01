@@ -1,0 +1,34 @@
+var galleryWindow = Ti.UI.createWindow({
+	backgroundColor: "#909090",
+	title: "Gallery"
+});
+
+//Utilizing the Filesystem titanium function to point titanium at the resources directory, images folder
+var galleryImg = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "galleryImages");
+//Assigning the filenames in the images folder to an array
+var imageFiles = galleryImg.getDirectoryListing();
+
+console.log(imageFiles);
+
+var randomBtn = Ti.UI.createView({
+	backgroundColor: "#333333",
+	height: 65,
+	bottom: 0
+});
+var randomText = Ti.UI.createLabel({
+	text: "Random Image",
+	font: {fontSize: 20, fontFamily: "Arial", fontWeight: "bold"},
+	textAlign: "center",
+	color: "#e6e6e6"
+});
+
+
+
+randomBtn.addEventListener("click", function(event){
+	console.log(event);
+});
+
+exports.galleryCall = galleryWindow;
+
+randomBtn.add(randomText);
+galleryWindow.add(randomBtn);

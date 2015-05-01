@@ -1,0 +1,23 @@
+var galleryLabel = Ti.UI.createLabel({
+	text: "Gallery",
+	top: 0,
+	height: 75,
+	width: "100%",
+	backgroundColor: "#ffffff",
+	font: {fontSize: 22, fontFamily: "Helvetica", fontWeight: "bold"},
+	color: "#333",
+	textAlign: "center"
+});
+var dataLabel = Ti.UI.createLabel({
+	text: "Data",
+	top: galleryLabel.height,
+	height: 75,
+	width: "100%",
+	backgroundColor: "#808080",
+	font: {fontSize: 22, fontFamily: "Helvetica", fontWeight: "bold"},
+	color: "#333",
+	textAlign: "center"
+});
+
+
+mainWin.add(galleryLabel, dataLabel);

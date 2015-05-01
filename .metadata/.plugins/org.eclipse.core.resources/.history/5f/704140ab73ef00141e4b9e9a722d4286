@@ -1,0 +1,16 @@
+var mainWin = Ti.UI.createWindow({
+	backgroundColor: "#808080",
+	text: "topic/theme",
+	font: {fontSize: 22, fontFamily: "Helvetica", fontWeight: "bold"}
+});
+
+//Require Launch page, Gallery page, Data page, and Custom page
+
+//Create a navigatio window protocol
+var navWin = Ti.UI.iOS.createNavigationWindow({
+	//Assign the mainWin window to the nav window
+	window: mainWin
+});
+
+navWin.open();
+var launchPage = require("launchPage");

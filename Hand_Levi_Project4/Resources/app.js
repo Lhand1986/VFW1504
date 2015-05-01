@@ -1,6 +1,6 @@
 var mainWin = Ti.UI.createWindow({
-	backgroundColor: "#808080",
-	title: "topic/theme"
+	backgroundColor: "#333333",
+	title: "Eye of the World"
 });
 
 //Require Launch page, Gallery page, Data page, and Custom page
@@ -12,3 +12,7 @@ var navWin = Ti.UI.iOS.createNavigationWindow({
 });
 
 navWin.open();
+var loadLaunch = require("launchPage");
+var loadGallery = require("galleryPage");
+var loadData = require("dataPage");
+var loadCustom = require("customPage");
