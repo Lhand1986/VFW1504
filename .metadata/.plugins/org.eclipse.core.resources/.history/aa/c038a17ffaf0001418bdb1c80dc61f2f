@@ -1,0 +1,32 @@
+//Send the doctor a message with your name, show the completed message at the end of the app.
+
+var customWindow = Ti.UI.createWindow({
+	backgroundColor: "#003b6f",
+	title: "Custom Page"
+});
+
+var customHeader = Ti.UI.createLabel({
+	text: "To send The Doctor a message, fill out the form below.",
+	top: 10,
+	left: 15,
+	font: {fontSize: 12, fontFamily: "Times New Roman", fontWeight: "bold"},
+	color: "#white"
+});
+
+var nameLabel = Ti.UI.createLabel({
+	text: "Please enter your name:",
+	top: customHeader.top + 40,
+	left: 15,
+	font: {fontSize: 18, fontFamily: "Arial"},
+	color: "#white"
+});
+
+var nameText = Ti.UI.createTextField({
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+	top: nameLabel.top + nameLabel.font.fontSize + 10,
+	left: nameLabel.left,
+	width: 250
+});
+
+customWindow.add(customHeader, nameLabel, nameText);
+exports.customCall = customWindow;

@@ -1,0 +1,10 @@
+//Send the doctor a message with your name, show the completed message at the end of the app.
+
+var customWindow = Ti.UI.createWindow({
+	backgroundColor: "#003b6f",
+	title: "Custom Page"
+});
+
+
+
+exports.customCall = customWindow;

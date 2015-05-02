@@ -1,0 +1,80 @@
+//Send the doctor a message with your name, show the completed message at the end of the app.
+
+var customWindow = Ti.UI.createWindow({
+	backgroundColor: "#003b6f",
+	title: "Custom Page"
+});
+
+var customHeader = Ti.UI.createLabel({
+	text: "To send The Doctor a message, fill out the form below.",
+	top: 10,
+	left: 15,
+	font: {fontSize: 12, fontFamily: "Times New Roman", fontWeight: "bold"},
+	color: "#white"
+});
+
+var nameLabel = Ti.UI.createLabel({
+	text: "Please enter your name:",
+	top: customHeader.top + 40,
+	left: 15,
+	font: {fontSize: 18, fontFamily: "Arial"},
+	color: "#white"
+});
+
+var nameText = Ti.UI.createTextField({
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+	top: nameLabel.top + nameLabel.font.fontSize + 10,
+	left: nameLabel.left,
+	width: 250
+});
+
+var problemLabel = Ti.UI.createLabel({
+	text: "Please enter your primary complaint:",
+	top: nameText.top + 40,
+	left: 15,
+	font: {fontSize: 18, fontFamily: "Arial"},
+	color: "#white"
+});
+
+var problemText = Ti.UI.createTextArea({
+	top: problemLabel.top + problemLabel.font.fontSize + 10,
+	left: 15,
+	width: 250, height: 150,
+	textAlign: "left"
+});
+
+var sendBtn = Ti.UI.createView({
+	backgroundColor: "#333333",
+	height: 65,
+	bottom: 0
+});
+var sendText = Ti.UI.createLabel({
+	text: "Send Message",
+	font: {fontSize: 20, fontFamily: "Arial", fontWeight: "bold"},
+	textAlign: "center",
+	color: "#e6e6e6"
+});
+
+function sendMessage(){
+	var messageWindow = Ti.UI.createWindow({
+		backgroundColor: "#003b6f",
+		title: "Message Sent"
+	});
+	var messageLabel = Ti.UI.createLabel({
+		top: 20,
+		left: 15,
+		font: {fontSize: 16, fontFamily: "Times New Roman"},
+		text: "Greetings, " + nameText.value + ", your message has been sent and received. The Doctor will get back to you after he has finished dealing with the Daleks, The Master, Cybermen, Weeping Angels, the Judoon, the Sontaran Empire, saved the last of the Ice Warriors, found Gallifrey, taken the sash, crown, key, rod, coronet, harp, ring, scrolls, and gauntlet from Rassilon, and gone out for ice cream with Clara. As he is a time traveler, he will get back to you shortly. However, if you encounter The Silence, you may not remember the response. Your message is below.\n\n" + problemText.value
+	});
+	
+	messageWindow.add(messageLabel);
+	navWin.openWindow(messageWindow);
+}
+
+	sendBtn.addEventListener("click", function(){
+	sendMessage();
+});	
+
+sendBtn.add(sendText);
+customWindow.add(customHeader, nameLabel, nameText, problemLabel, problemText, sendBtn);
+exports.customCall = customWindow;

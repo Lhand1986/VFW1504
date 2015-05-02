@@ -1,20 +1,20 @@
+//Create a window to hold the information
 var dataWindow = Ti.UI.createWindow({
 	backgroundColor: "#909090",
 	title: "Data"
 });
 
+//Create a table view section to hold JSON data
 var dataTable = Ti.UI.createTableViewSection({
 	headerTitle: "TARDIS Crew"
 });
 
+//Create a table view to hold the table view section, set the style for iPhone to a grouped style
 var dataView = Ti.UI.createTableView({
 	style: Ti.UI.iPhone.TableViewStyle.GROUPED
 });
 
-//Create a table view that is populated with a JSON object for this section
-
-//Detail page needs a bit more detail, pictures, text, and other information.
-
+//Initializing JSON object
 var data = {
 	"characters": [
 	{
@@ -30,14 +30,16 @@ var data = {
 	]
 };
 
-//Creating a function to be called in a loop
-var getDetail = function(){
+//Creating a function to be open a new window and utilize JSON data during event propagation
+var getDetail = function(dataSource){
+	
+	//Creating a container for the image view
 	var imageViewContainer = Ti.UI.createView({
 	});
-	
+	//Creating an image view to hold the image
 	var imageView = Ti.UI.createImageView({
 		backgroundColor: "#808080",
-		image: this.image,
+		image: dataSource.image,
 		top: 20,
 		left: 20,
 		height: 200
@@ -45,13 +47,13 @@ var getDetail = function(){
 	//Creating a window
 	var detailWindow = Ti.UI.createWindow({
 		//Setting the window title to the .title property in the item that called the function
-		title: this.title,
+		title: dataSource.title,
 		backgroundColor: "#f5f5f5"
 	});
 	//Creating a label for text
 	var detailText = Ti.UI.createLabel({
 		//Setting the text in the label to the .desc property in the item that called the function
-		text: this.desc,
+		text: dataSource.desc,
 		//Setting a font size and family for the text
 		font: {fontSize: 14, fontFamily: "Arial"},
 		//Adding spacing at the top
@@ -61,6 +63,7 @@ var getDetail = function(){
 		//Adding spacing at the right
 		right: 15
 	});
+	//Adding the container to the view
 	imageViewContainer.add(imageView);
 	
 	//Add the detailText label to the detailWindow
@@ -69,6 +72,7 @@ var getDetail = function(){
 	navWin.openWindow(detailWindow);
 };
 
+//Utilizing a for loop to import the JSON data to individual rows
 for(var i=0, j=data.characters.length; i<j; i++){
 	var theRow = Ti.UI.createTableViewRow({
 		title: data.characters[i].name,
@@ -76,18 +80,22 @@ for(var i=0, j=data.characters.length; i<j; i++){
 		image: data.characters[i].image,
 		hasChild: true
 	});
-	console.log(theRow.title);
+	
+	//Add the rows to the data table
 	dataTable.add(theRow);
-	theRow.addEventListener("click", getDetail);
 }
 
+//Create event propagation to listen for a click on each of the rows
+dataView.addEventListener("click", function(event){
+	getDetail(event.source);
+});
 
-
-
+//Convert the data section to an array for assignment
 var dataSection = [dataTable];
 
+//Set the data property of the view to the array
 dataView.setData(dataSection);
+//Add the view to the window
 dataWindow.add(dataView);
-
-
+//Making the window globally available
 exports.dataCall = dataWindow;
